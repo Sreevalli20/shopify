@@ -6,7 +6,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
       - AWS_DEFAULT_REGION=ap-southeast-2
-      - ECR_REPOSITORY=innovatecorp-app
+      - ECR_REPOSITORY=shopfast-devops
       - IMAGE_TAG=latest
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
 
